@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anomaly-injector"
+version = "0.1.0"
+description = "Инъекция аномалий в трейсы AI-агентов (AEF Tracing) для калибровки MAS-monitor"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=1.5",
+    "pyarrow>=10.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["anomaly_injector*"]
